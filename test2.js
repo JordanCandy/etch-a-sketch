@@ -1,15 +1,35 @@
 const container = document.querySelector("#container");
 
+// function create(){
+//     const gridItem = document.createElement("div");
+//     gridItem.classList.add("content");
+//     container.addEventListener("mousedown", function(event){
+//         gridItem.addEventListener("mouseover", function(event){
+//             event.target.style.backgroundColor = "black";
+//         });
+//          gridItem.addEventListener("mouseover", function(event){
+  //        event.target.style.backgroundColor = colorPicker();
+//      });
+//     });
+
+//     document.querySelector("#colors").addEventListener("click", function(event){
+//         container.addEventListener(
+//             "mousedown", function(event){
+//     ;
+//     container.appendChild(gridItem);
+// }
+
 function create(){
     const gridItem = document.createElement("div");
     gridItem.classList.add("content");
-    container.addEventListener("mousedown", function(event){
-        gridItem.addEventListener("mouseover", function(event){
-            event.target.style.backgroundColor = "black";
-        })
-    });
+   container.addEventListener("mousedown", function(event){
+    gridItem.addEventListener("mouseover", function(event){
+        event.target.style.backgroundColor = "black";
+    });//end of mouse over
+   }); //end of mousedown
     container.appendChild(gridItem);
 }
+
 
 const input = document.querySelector("#firstInput");
 const viewVal = document.querySelector("#myVal");
@@ -46,11 +66,11 @@ typeColor.addEventListener("mouseover", function(event){
 }
 
 function reset(){
-    document.querySelector(".content").innerHTML = '';
-    create();
+    while(container.firstChild){
+        container.removeChild(container.firstChild);
+        viewVal.textContent = "2";
+    }
 }
 
 var btn = document.querySelector("#reset");
-    btn.addEventListener("click", function(){
-        reset();
-    });
+    btn.addEventListener("click", reset);

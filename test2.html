@@ -10,22 +10,23 @@
 <body>
 
         <div class="inner">
-        <h1>Magic <span class="special-font">Etch-A-Sketch</span> Screen</h1>
-    <div id="container"></div>
-    <span class="rangedInput" title="">
-        <input type="range" id="firstInput" min="2" max="64" value="16">
-    </span>
+            <h1>Magic <span class="special-font">Etch-A-Sketch</span> Screen</h1>
+            <div id="container"></div>
+
+        <div class="bottom">
+            <button id="reset">Clear</button>
+            <span class="rangedInput" title="">
+                <input type="range" id="firstInput" min="2" max="64" value="2">
+            </span>
+            <p id="myVal">2</p>
+            </div>
         </div>
 
-    <div class="other">
-    <!-- <span title="">
-        <input type="range" id="firstInput" min="2" max="64" value="16">
-    </span> -->
-    <p id="myVal"></p>
+    <!-- <div class="other">
     <input type="color" id="colorpicker" value="#ffffff">
-    <button id="reset">Clear</button>
-
-    </div>
+    
+    <button id="colors">Rainbow</button>
+    </div> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="test2.js"></script>
 </body>

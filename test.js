@@ -1,5 +1,3 @@
-//input type range
-//color picker
 const container = $("#container");
 function create(){
 
@@ -7,7 +5,6 @@ function create(){
             gridItem.addClass('content');
             container.append("<div></div>");
             container.on("mouseenter", function(event){
-            // var targets = event.target;
             return this;
             });
  }
