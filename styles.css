@@ -50,13 +50,6 @@ body{
 
 #colorpicker{
   border-radius: 100%;
-input{
-  display: block;
-}
-
-.hold{
-  background-color: white;
-  border: none;
 }
 
 #container{
