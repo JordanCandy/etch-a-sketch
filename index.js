@@ -66,9 +66,6 @@ typeColor.addEventListener("mouseover", function(event){
 }
 
 function reset(){
-    // container.innerHTML = '';
-    container.removeChild(div);
-    create();
     while(container.firstChild){
         container.removeChild(container.firstChild);
         viewVal.textContent = "2";
@@ -76,4 +73,5 @@ function reset(){
 }
 
 var btn = document.querySelector("#reset");
-    btn.addEventListener("click", reset);
+
+btn.addEventListener("click", reset);
