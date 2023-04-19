@@ -54,24 +54,11 @@ var randomColor = () =>{
     return 'rgb(' + round(random() * total) + ',' + round(random() * total) + ',' + round(random() * total) + ')';
 }
 
-//id= colorpicker
-
-var typeColor = document.getElementById("colorpicker");
-
-function colorPicker(){
-typeColor.addEventListener("mouseover", function(event){
-    var myColor = typeColor.value;
-    return myColor;
-});
-}
-
-function reset(){
+//reset container
+var btn = document.querySelector("#reset");
+btn.addEventListener("click", function(){
     while(container.firstChild){
         container.removeChild(container.firstChild);
         viewVal.textContent = "2";
     }
-}
-
-var btn = document.querySelector("#reset");
-
-btn.addEventListener("click", reset);
+});
