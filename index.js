@@ -1,24 +1,4 @@
 const container = document.querySelector("#container");
-
-// function create(){
-//     const gridItem = document.createElement("div");
-//     gridItem.classList.add("content");
-//     container.addEventListener("mousedown", function(event){
-//         gridItem.addEventListener("mouseover", function(event){
-//             event.target.style.backgroundColor = "black";
-//         });
-//          gridItem.addEventListener("mouseover", function(event){
-  //        event.target.style.backgroundColor = colorPicker();
-//      });
-//     });
-
-//     document.querySelector("#colors").addEventListener("click", function(event){
-//         container.addEventListener(
-//             "mousedown", function(event){
-//     ;
-//     container.appendChild(gridItem);
-// }
-
 function create(){
     const gridItem = document.createElement("div");
     gridItem.classList.add("content");
@@ -34,6 +14,7 @@ function create(){
 const input = document.querySelector("#firstInput");
 const viewVal = document.querySelector("#myVal");
 
+//get value of input range
 input.addEventListener("input", function(val){
 val = this.value;
 viewVal.textContent = val;
@@ -47,24 +28,7 @@ for (var i = 0; i < val; i++){
 }
 });
 
-var randomColor = () =>{
-    var round = Math.round;
-    var random = Math.random;
-    var total = 225;
-    return 'rgb(' + round(random() * total) + ',' + round(random() * total) + ',' + round(random() * total) + ')';
-}
-
-//id= colorpicker
-
-var typeColor = document.getElementById("colorpicker");
-
-function colorPicker(){
-typeColor.addEventListener("mouseover", function(event){
-    var myColor = typeColor.value;
-    return myColor;
-});
-}
-
+//reset grid
 function reset(){
     while(container.firstChild){
         container.removeChild(container.firstChild);
