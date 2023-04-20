@@ -34,4 +34,8 @@ function reset(){
         container.removeChild(container.firstChild);
         viewVal.textContent = "2";
     }
-});
+};
+
+var clear = document.querySelector("#reset");
+
+clear.addEventListener("click", reset);
